@@ -11,12 +11,13 @@ def list_files_by_subfolder(directory):
             title, author = get_music_details(file_path)
             files_by_subfolder.setdefault(subfolder_name, []).append([file, title, author])
 
-    for subfolder, files in files_by_subfolder.items():
-        print(f"{subfolder}")
-        for file_details in files:
-            print(f"  - Filename: {file_details[0]}")
-            print(f"    Title: {file_details[1]}")
-            print(f"    Author: {file_details[2]}")
+    with open('music list.txt', 'w') as f:
+        for subfolder, files in files_by_subfolder.items():
+            f.write(f"\n{subfolder}\n")
+            for file_details in files:
+                f.write(f"\tFilename: {file_details[0]}\n")
+                f.write(f"\t\tTitle: {file_details[1]}\n")
+                f.write(f"\t\tAuthor: {file_details[2]}\n")
 
 
 
@@ -33,4 +34,5 @@ def get_music_details(file_path):
         return None, None
 
 directory_path = 'C:/Users/vandr/Downloads/Zenék'
+directory_path = input("Give an absolute paht where I should list the musics!\n")
 list_files_by_subfolder(directory_path)
