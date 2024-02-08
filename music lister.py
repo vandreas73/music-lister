@@ -33,6 +33,5 @@ def get_music_details(file_path):
         print(f"Error: {e}")
         return None, None
 
-directory_path = 'C:/Users/vandr/Downloads/Zenék'
 directory_path = input("Give an absolute paht where I should list the musics!\n")
 list_files_by_subfolder(directory_path)
