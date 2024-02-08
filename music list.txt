@@ -5,6 +5,9 @@ Chacha
 		Author: None
 
 Rumba
+	Filename: separation-185196 - Copy.mp3
+		Title: MyTitle
+		Author: Artist
 	Filename: separation-185196.mp3
 		Title: MyTitle
 		Author: Artist
